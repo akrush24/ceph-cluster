@@ -1,2 +1,2 @@
-*.keyring
+*.keyring*
 *.log
