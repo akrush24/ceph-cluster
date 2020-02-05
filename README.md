@@ -10,12 +10,6 @@ it's my config file for CEPH Cluster
 * put config file ./ceph.conf in /etc/ceph.conf
 ```ceph-deploy --overwrite-conf admin n0{1,2,3,4}.sds.srv.local```
 
-# Destroy ALL
-```
-# ceph-deploy purge n0{1,2,3,4}
-# ceph-deploy purgedata n0{1,2,3,4}
-```
-
 # Create MON
 ```
 # ceph-deploy mon create-initial
@@ -38,8 +32,13 @@ if necessary creal data and metadata information from HDD
 # ceph-deploy mgr create n0{1,2,3,4}
 ```
 
-* delete mon
+# Unistall
+## delete mon
 ```
 # ceph-deploy mon destroy n01
 ```
-
+## delete all
+```
+# ceph-deploy purge n0{1,2,3,4}
+# ceph-deploy purgedata n0{1,2,3,4}
+```
