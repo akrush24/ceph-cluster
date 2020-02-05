@@ -1,10 +1,11 @@
 # ceph-cluster
 it's my config file for CEPH Cluster
+```
 * n01.sds.srv.local - 10.110.27.10, 10.110.28.10
 * n02.sds.srv.local - 10.110.27.11, 10.110.28.11
 * n03.sds.srv.local - 10.110.27.12, 10.110.28.12
 * n04.sds.srv.local - 10.110.27.13, 10.110.28.13
-
+```
 # Installation
 ## install pkgs on OS 
 ```ceph-deploy install --release=nautilus n0{1,2,3,4}.sds.srv.local```
