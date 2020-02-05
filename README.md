@@ -54,7 +54,16 @@ if necessary creal data and metadata information from HDD
 ```
 # ceph osd pool application enable rbdpool rbd
 ```
-## create rbd image
+## create and delete rbd image
 ```
 # rbd create rbdpool/my-test-image --size 102400
+# rbd rm rbdpool/my-test-image
+```
+use rbd
+```
+# uname -r
+3.10.0-1062.1.2.el7.x86_64
+# rbd feature disable rbdpool/my-test-image object-map fast-diff deep-flatten
+# mkfs /dev/rbd0
+# mount /dev/rbd/rbdpool/my-test-image /mnt/
 ```
