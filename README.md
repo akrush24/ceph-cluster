@@ -48,5 +48,12 @@ if necessary creal data and metadata information from HDD
 ## create pool
 ```
 # ceph osd pool create rbdpool 128
+```
+## set application to pool
+```
 # ceph osd pool application enable rbdpool rbd
+```
+## create rbd image
+```
+# rbd create rbdpool/my-test-image --size 102400
 ```
