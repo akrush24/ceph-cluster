@@ -43,3 +43,10 @@ if necessary creal data and metadata information from HDD
 # ceph-deploy purge n0{1,2,3,4}
 # ceph-deploy purgedata n0{1,2,3,4}
 ```
+
+# USE
+## create pool
+```
+# ceph osd pool create rbdpool 128
+# ceph osd pool application enable rbdpool rbd
+```
